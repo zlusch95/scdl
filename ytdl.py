@@ -52,7 +52,7 @@ def handleSong(url, path="/Users/tilschulz/Music/dj/techno6"):
             downloadSong(ydl, url, info, path, downloadAll=True)
 
 
-def handlePlaylist(url, path="/Users/tilschulz/Music/dj/techno7"):
+def handlePlaylist(url, path="/Users/tilschulz/Music/dj/rawKicks"):
     ydl_opts["paths"] = {"home": path}
     ydl_opts["download_archive"] = path + "/" + "history.txt"
     ydl_opts["noplaylist"] = False
@@ -162,14 +162,14 @@ def handleSongMetaData(metaData, info, mp3Path):
             return metaData[0] != info["artist"] or metaData[1] != info["track"]
 
     def setSongMetaData():
-        print("Artist:", metaData[0])
-        print("Track:", metaData[1])
         try:
+            print("Artist:", metaData[0])
+            print("Track:", metaData[1])
             audio = EasyID3(mp3Path)
             audio["artist"] = metaData[0]
             audio["title"] = metaData[1]
             audio.save()
-        except (FileNotFoundError, mutagen.MutagenError) as e:
+        except (FileNotFoundError, mutagen.MutagenError, IndexError) as e:
             print(
                 "Error: yt_dlp extracted different filename. Keep default yt_dlp metadata instead"
             )
