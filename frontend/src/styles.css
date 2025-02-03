@@ -1,0 +1,132 @@
+/* styles.css */
+
+/* Global Body and HTML Styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif; /* Angular Material's default font */
+  background-color: #f3f4f6; /* Light gray background */
+  color: #333; /* Dark gray text color */
+  height: 100%;
+}
+
+/* Make sure the app fills the screen */
+#app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Basic typography and font settings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Link Styling */
+a {
+  text-decoration: none;
+  color: #9333ea;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #6b21a8;
+}
+
+/* Global Button Styling */
+button {
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #e5e7eb;
+  cursor: not-allowed;
+}
+
+/* App Container Styling */
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Simple Box Shadow */
+.box-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Centering elements */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Global Input Field Styling (optional) */
+input,
+textarea,
+select {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #9333ea;
+  box-shadow: 0 0 5px rgba(147, 51, 234, 0.6);
+}
+
+/* Adjust Form Field Styles for Angular Material */
+mat-form-field {
+  width: 100%;
+}
+
+/* App-wide Color Palette (if not using Angular Material defaults) */
+:root {
+  --primary-color: #9333ea;
+  --secondary-color: #3b82f6;
+  --accent-color: #ec4899;
+}
+
+body {
+  --primary-color: var(--primary-color);
+  --secondary-color: var(--secondary-color);
+  --accent-color: var(--accent-color);
+}
+
+/* Customize Angular Material button color */
+.mat-raised-button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.mat-raised-button:hover {
+  background-color: #7e22ce;
+}
