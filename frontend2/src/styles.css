@@ -46,14 +46,14 @@ a:hover {
 }
 
 /* Global Button Styling */
-button {
+/* button {
   border-radius: 8px;
   padding: 12px 24px;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 button:hover {
   transform: translateY(-2px);
