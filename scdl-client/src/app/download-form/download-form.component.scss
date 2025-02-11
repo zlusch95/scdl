@@ -1,0 +1,23 @@
+// @use "@angular/material" as mat;
+
+// // Customize the entire app. Change :root to your selector if you want to scope the styles.
+// :app-download-form {
+//   @include mat.form-field-overrides(
+//     (
+//       filled-caret-color: orange,
+//       filled-focus-active-indicator-color: red,
+//       filled-container-color: red,
+//     )
+//   );
+// }
+
+// .outline-background-form {
+//   --mdc-outlined-text-field-outline-color: #4caf50;
+// }
+
+// .outline-background-form .mdc-text-field {
+//   background-color: #50c4d3 !important; // Light cyan background
+// }
+.mdc-text-field {
+  background-color: #e7cfe8 !important;
+}

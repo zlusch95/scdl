@@ -1,0 +1,71 @@
+<main
+  class="mat-typography"
+  style="
+    background: linear-gradient(135deg, #3b82f6, #9333ea, #ec4899);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <div
+    style="
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    "
+  >
+    <h1
+      style="
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 24px;
+      "
+    >
+      🎵 <span style="color: #9333ea">Soundcloud</span> Downloader
+    </h1>
+    <p
+      style="
+        text-align: center;
+        color: #6b7280;
+        margin-bottom: 24px;
+        font-size: 14px;
+      "
+    >
+      Paste your playlist URL and click download to save your favorite tracks!
+    </p>
+    <form
+      (ngSubmit)="downloadTrack()"
+      style="display: flex; flex-direction: column; gap: 16px"
+    >
+      <mat-form-field class="outline-background-form" appearance="outline">
+        <mat-label>Playlist URL</mat-label>
+        <input
+          matInput
+          [(ngModel)]="soundcloudUrl"
+          name="soundcloudUrl"
+          type="url"
+          placeholder="https://soundcloud.com/your-playlist"
+          required
+        />
+      </mat-form-field>
+      <button
+        mat-flat-button
+        style="
+          width: 100%;
+          padding: 12px;
+          font-size: 16px;
+          background-color: #9333ea;
+        "
+        [disabled]="isLoading"
+      >
+        <span *ngIf="isLoading">Loading...</span>
+        <span *ngIf="!isLoading">Download Playlist</span>
+      </button>
+    </form>
+  </div>
+</main>
